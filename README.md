@@ -1,27 +1,49 @@
-# NgFokus
+![ng-fokus](thumbnail.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+# ng-fokus
 
-## Development server
+A ng-fokus é uma aplicação da ferramenta do método Pomodoro (gestão de tarefas), baseado no funcionamento do site promofocus. O projeto está desenvolvido em Angular 18 com service worker.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔨 Funcionalidades do projeto
 
-## Code scaffolding
+O aplicativo permite que os usuários gerenciem suas tarefas utilizando a técnica Pomodoro, ajudando a aumentar a produtividade e a manter o foco.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ✔️ Técnicas e tecnologias utilizadas
 
-## Build
+As técnicas e tecnologias utilizadas no projeto são:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- `Angular 18`: framework para construção de aplicações web
+- `Service Worker`: para suporte offline e melhoria de performance  
+- `Componentes Angular`: para modularização e reutilização de código
+- `RxJS`: para programação reativa
+- `TypeScript`: linguagem de programação utilizada no desenvolvimento
 
-## Running unit tests
+## 📁 Acesso ao projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Você pode [acessar o código fonte do projeto no GitHub](https://github.com/Charlinho/ng-fokus).
 
-## Running end-to-end tests
+## 🛠️ Abrir e rodar o projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para abrir e rodar o projeto, siga os passos abaixo:
 
-## Further help
+1. Clone o repositório do projeto:
+   ```bash
+   git clone https://github.com/Charlinho/ng-fokus.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd ng-fokus
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Execute o projeto:
+   ```bash
+   ng serve
+   ```
+5. Abra o navegador e acesse `http://localhost:4200/` para ver a aplicação em execução.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📚 Mais informações
+
+Para mais informações sobre o projeto e suas funcionalidades, visite o [repositório no GitHub](https://github.com/Charlinho/ng-fokus).

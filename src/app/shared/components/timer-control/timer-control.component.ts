@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
+import { ContextService, ContextType } from '../../services/context.service';
 
 @Component({
   selector: 'app-timer-control',
@@ -20,8 +21,27 @@ export class TimerControlComponent {
 
   private intervalId: any;
 
+  private contextService = inject(ContextService);
+
+  context = this.contextService.contextSignal$;
+
   constructor() {
-    this.configTimer();
+    effect(() => {
+
+      switch (this.context()) {
+        case 'foco':
+          this.timerInSeconds = 30;
+          break;
+        case 'descanso-curto':
+          this.timerInSeconds = 5;
+          break;
+        case 'descanso-longo':
+          this.timerInSeconds = 15;
+          break;
+      }
+
+      this.configTimer();
+    });
   }
 
   onStartClick(): void {
@@ -35,6 +55,10 @@ export class TimerControlComponent {
   onPauseClick(): void {
     this.isTimerStarted = false;
     clearInterval(this.intervalId);
+  }
+
+  onChangeContext(context: ContextType): void {
+    this.contextService.updateContext(context);
   }
 
   private countdown(): void {

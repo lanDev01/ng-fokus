@@ -1,3 +1,5 @@
+@use '../../../../styles/variables' as *;
+
 .app {
   &__section-banner-container {
     width: 99rem;
@@ -23,7 +25,6 @@
   }
 }
 
-// Opcional: Adicionar mixins para responsividade
 @mixin respond-to($breakpoint) {
   @if $breakpoint == "small" {
     @media (max-width: 768px) {
@@ -32,7 +33,6 @@
   }
 }
 
-// Opcional: Adicionar media queries
 .app {
   &__section-banner-container {
     @include respond-to("small") {

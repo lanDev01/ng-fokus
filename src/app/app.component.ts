@@ -8,15 +8,7 @@ import { TaskManagerComponent } from "./shared/components/task-manager/task-mana
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    TimerControlComponent,
-    TaskManagerComponent
-  ],
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
